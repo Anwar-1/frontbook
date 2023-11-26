@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 export const Book = () => {
 
-    const baseUrl = 'http://localhost:8000/api/books'
+    const baseUrl = 'https://bookback-eight.vercel.app/api/books'
     const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [error, setError] = useState(null)
@@ -73,7 +73,7 @@ export const Book = () => {
                     <li key={item._id}>
                         <Link to={`/books/${item.slug}`}>
                             <img
-                                src={`http://localhost:8000/uploads/${item.thumbnail}`}
+                                src={`https://bookback-eight.vercel.app/uploads/${item.thumbnail}`}
                                 alt={item.title}
                             />
                             <h3>{item.title}</h3>
