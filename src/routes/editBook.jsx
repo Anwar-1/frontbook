@@ -5,7 +5,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 function editBook() {
   const navigate = useNavigate();
   const urlSlug = useParams();
-  const baseUrl = `http://localhost:8000/api/books/${urlSlug.slug}`;
+  const baseUrl = `https://bookback-eight.vercel.app/api/books/${urlSlug.slug}`;
 
   const [bookId, setBookId] = useState("");
   const [title, setTitle] = useState("");
@@ -58,7 +58,7 @@ function editBook() {
     //}
 
     try {
-      const response = await fetch("http://localhost:8000/api/books", {
+      const response = await fetch("https://bookback-eight.vercel.app/api/books", {
         method: "PUT",
         body: formData,
       });
@@ -91,7 +91,7 @@ function editBook() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/api/books/" + bookId,
+        "https://bookback-eight.vercel.app/api/books/" + bookId,
         {
           method: "DELETE",
         }
@@ -129,7 +129,7 @@ function editBook() {
               <img src={`${image}`} alt="preview image" />
             ) : (
               <img
-                src={`http://localhost:8000/uploads/${thumbnail}`}
+                src={`https://bookback-eight.vercel.app/uploads/${thumbnail}`}
                 alt="preview image"
               />
             )}
