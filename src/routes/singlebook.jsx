@@ -5,7 +5,7 @@ export const Singlebook = () => {
 
     const [data, setData] = useState([])
     const urlSlug = useParams()
-    const baseUrl = `https://bookback-eight.vercel.app/api/books/${urlSlug.slug}`
+    const baseUrl = `https://book-dcd1.onrender.com/api/books/${urlSlug.slug}`
     useEffect(() => {
 
         const fetchData = async () => {
@@ -43,7 +43,7 @@ export const Singlebook = () => {
             <Link to={"/books"}> ◀️Books</Link>
             <div className='bookdetails'>
                 <div className='col-1'>
-                    <img src={`https://bookback-eight.vercel.app/uploads/${data?.thumbnail}`}
+                    <img src={`https://book-dcd1.onrender.com/uploads/${data?.thumbnail}`}
                         alt={data?.title} />
                          <Link to={`/editbook/${data.slug}`}>Edit</Link>
                 </div>
